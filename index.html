@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <nav>
+        <ul class="top-nav">
+            <li class="top" id="logo">logo</li>
+            <li class="top">
+                <span class="material-symbols-outlined">
+                    search
+                </span>
+            </li>
+        </ul>
+        <ul class="main-nav">
+            <li class="control selected">
+                <span class="material-symbols-outlined">
+                    home
+                </span>
+            </li>
+            <li class="control">
+                <span class="material-symbols-outlined">
+                    sd
+                </span>
+            </li>
+            <li class="control">
+                <span class="material-symbols-outlined">
+                    assignment
+                </span>
+            </li>
+            <li class="control">
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+            </li>
+        </ul>
+        <ul class="bottom-nav">
+            <li id="bell"><i class="fa fa-bell-o" style="font-size:24px"></i>
+                <div class="notification"></div>
+            </li>
+            <li id="log-out">
+                <span class="material-symbols-outlined">
+                    logout
+                </span>
+
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="first">
+            <div class="userProfile">
+                <img src="./transformer.jpg" alt="user-image" class="user-image">
+                <div>
+                    <h1 class="user-name">Hi Dheeraj,</h1>
+                    <p class="greeting-message">Welcome Back</p>
+                </div>
+            </div>
+            <div class="today-event">
+                <h3>Today</h3>
+                <h1 id="acc-bal">$20,000</h1>
+                <label for="acc-bal">Account balance</label>
+                <h3 id="contrebution-yearly">$20,000</h3>
+                <label for="contrebution-yearly">Year-to-Date Contributions</label>
+                <h3 id="total-interest">$20,000</h3>
+                <label for="total-interest">Total Interest</label>
+                <button class="btn i-want">I want to *</button>
+            </div>
+            <div class="recent-transc">
+                <h3>Recent Trancations</h3>
+                <p id="date1">2022-05-25</p>
+                <label for="date1">Withdrawal Transfer to Bank-XXX12</label>
+                <hr>
+                <p id="date2">2022-04-22</p>
+                <label for="date2">Withdrawal Transfer to Bank-XXX12</label>
+                <hr>
+                <p id="date3">2022-03-07</p>
+                <label for="date3">Withdrawal Transfer to Bank-XXX12</label>
+                <hr>
+            </div>
+        </div>
+        <div class="second">
+            <h1 class="retirement-income">Retirement Income</h1>
+            <h3 class="starting-year">Starting Year 2056</h3>
+            <div class="goals">
+                <div class="goal top-goal">
+                    <p class="goal-status" id="my-goal">$300,000</p>
+                    <label for="my-goal">My goal</label>
+                    <hr>
+                </div>
+                <div class="goal">
+                    <p class="goal-status" id="goal-achive">59%</p>
+                    <label for="goal-achive">Goal Achived</label>
+                    <hr>
+                </div>
+                <div class="goal">
+                    <p class="goal-status" id="est-income">$300</p>
+                    <label for="est-income">Est. Monthly Income</label>
+                    <hr>
+                </div>
+            </div>
+            <h3 class="contribution-head">Contributions Overtime</h3>
+            <div class="chart-details">
+                <div class="detail1">
+                    <div class="box c1"></div>
+                    <p>Employer:</p>
+                    <b>K 73,500</b>
+                </div>
+                <div class="detail1">
+                    <div class="box c2"></div>
+                    <p>Employee:</p>
+                    <b> K 52,500</b>
+                </div>
+                <div class="detail1">
+                    <div class="box c3"></div>
+                    <p>Total Interest:</p>
+                    <b> K 244,313</b>
+                </div>
+            </div>
+            <div class="chart">
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <div class="peers">
+                <h3 class="peer-heading" id="peers-head">How do I compare my peers ?</h3>
+                <label for="peers-head">These numbers represent current goal achievement</label>
+                <div class="peers-compare">
+                    <div class="details">
+                        <p><b>Age:</b> Under 30 </p>
+                        <hr>
+                        <p><b>Salary:</b> K 20 - K 30</p>
+                        <hr>
+                        <p><b>Gender:</b> Male</p>
+                    </div>
+                    <div class="peers-chart">
+                        <div class="donut">
+                            <canvas id="myPiChart1"></canvas>
+                        </div>
+                        <div class="donut">
+                            <canvas id="myPiChart2"></canvas>
+
+                        </div>
+                        <div class="donut">
+                            <canvas id="myPiChart3"></canvas>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="third">
+            <div class="retairement-strat">
+                <h1 class="retire-head">Retirement Strategy</h1>
+                <label for="emp-cont">Employee Contrebution</label>
+                <div class="input-cont">
+                    <input type="range" class="slider" name="empCont" id="emp-cont" min="0" max="100">
+                    <span id="emp-cont-val" class="retire-data">12%</span>
+                </div>
+                <label for="ret-age">Retirement Age</label>
+                <div class="input-cont">
+                    <input type="range" class="slider" name="retAge" id="ret-Age" min="20" max="100">
+                    <span id="ret-Age-val" class="retire-data">65</span>
+                </div>
+                <hr>
+                <div class="third-rate">
+                    <p>Employer Contribution</p>
+                    <span>84%</span>
+                </div>
+                <div class="third-rate">
+                    <p>Interest Rate</p>
+                    <span>5%</span>
+                </div>
+
+            </div>
+            <button id="update" class="btn update-btn">Update</button>
+            <a href="/" id="help">View Help Doc ></a>
+            <div class="testomonial">
+                <p>Are you concedring a <br><b>Housing Advance ?</b></p>
+                <p class="low">Limited time reduced intrest</p>
+                <a href="/">learn more ></a>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
